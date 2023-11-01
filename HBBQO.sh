@@ -21,3 +21,28 @@ enDesenvolupament () {
   read opcio
 }
 
+opcioNoValida () {
+   echo Opció incorrecte ha de ser un valor de 0 a 4
+   sleep 2
+   clear 
+}
+ 
+opcio=1
+ 
+while [ $opcio -ne 0 ]
+do
+  clear
+  enDesenvolupament
+ 
+  case $opcio in
+    1) echo "Opc1 En desenvolupament";;
+    2) echo "Opc2 En desenvolupament";;
+    3) echo "Opc3 En desenvolupament";;
+    4) echo "Opc4 En desenvolupament";;
+    0) echo "Gràcies per la vostra visita a HBBQO..."
+       sleep 2 ;;
+    *) echo Opció incorrecte ha de ser un valor de 1 a 4
+  esac
+  echo Prem ENTER per continuar
+  read tecla
+done
